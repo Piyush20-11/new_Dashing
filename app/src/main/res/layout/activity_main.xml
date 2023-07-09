@@ -1,0 +1,237 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Banner -->
+            <ImageView
+                android:id="@+id/bannerImageView"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/image" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="10dp"
+                android:text="Book Ambulance"
+                android:textColor="@color/black"
+                android:textSize="24dp"
+                android:textStyle="bold" />
+
+
+
+            <!-- Ambulance Booking CardView -->
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/ambulanceCardView"
+                android:layout_width="253dp"
+                android:layout_height="149dp"
+                android:layout_margin="16dp"
+                android:elevation="16dp"
+                android:visibility="visible"
+
+                app:cardCornerRadius="10dp"
+                app:cardUseCompatPadding="true">
+
+                <!-- Add your ambulance booking layout here -->
+                <ImageView
+                    android:id="@+id/ambulanceImageView"
+                    android:layout_width="234dp"
+                    android:layout_height="145dp"
+                    android:layout_alignParentLeft="true"
+
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="16dp"
+                    android:src="@drawable/amb" />
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"
+                android:shadowColor="#4C3D3D"
+                android:text="Book Appointment"
+                android:textAllCaps="true"
+                android:textColor="@color/black"
+                android:textSize="24dp"
+                android:textStyle="bold|italic" />
+
+
+            <!-- Grid Layout for Specialist Appointments -->
+            <GridLayout
+                android:id="@+id/specialistGridLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:alignmentMode="alignMargins"
+                android:columnCount="2"
+                android:columnOrderPreserved="false"
+
+                android:rowCount="3">
+
+                <!-- CardView - Cardiologist -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardiologistCardView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_rowWeight="1"
+                    app:cardCornerRadius="20dp"
+
+                    android:layout_columnWeight="1"
+                    android:layout_margin="8dp"
+                    android:elevation="8dp">
+
+                    <!-- Add your Cardiologist appointment layout here -->
+                    <ImageView
+                        android:id="@+id/cardiView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="150dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+
+                        android:layout_marginRight="16dp"
+                        android:src="@drawable/cardi" />
+                </androidx.cardview.widget.CardView>
+
+                <!-- CardView - Neurologist -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/neurologistCardView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_rowWeight="1"
+                    app:cardCornerRadius="20dp"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="8dp"
+                    android:elevation="8dp">
+
+                    <!-- Add your Neurologist appointment layout here -->
+                    <ImageView
+                        android:id="@+id/neuroView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="150dp"
+                        android:layout_alignParentLeft="true"
+
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="16dp"
+                        android:src="@drawable/neuro" />
+                </androidx.cardview.widget.CardView>
+
+                <!-- CardView - Orthologist -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/orthologistCardView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_rowWeight="1"
+                    app:cardCornerRadius="20dp"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="8dp"
+                    android:elevation="8dp">
+
+                    <!-- Add your Orthologist appointment layout here -->
+                    <ImageView
+                        android:id="@+id/orthoView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="150dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginRight="16dp"
+                        android:src="@drawable/ortho" />
+
+                </androidx.cardview.widget.CardView>
+
+                <!-- CardView - Pulmunologist -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/pulmunologistCardView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_rowWeight="1"
+                    app:cardCornerRadius="20dp"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="8dp"
+                    android:elevation="8dp">
+
+                    <!-- Add your Pulmunologist appointment layout here -->
+                    <ImageView
+                        android:id="@+id/pulmunoView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="150dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginRight="16dp"
+                        android:src="@drawable/pulmuno" />
+
+                </androidx.cardview.widget.CardView>
+
+                <!-- CardView - Psychiatrist -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/psychiatristCardView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    app:cardCornerRadius="20dp"
+                    android:layout_margin="8dp"
+                    android:elevation="8dp">
+
+                    <!-- Add your Psychiatrist appointment layout here -->
+                    <ImageView
+                        android:id="@+id/psychiaView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="150dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginRight="16dp"
+                        android:src="@drawable/psychia" />
+
+                </androidx.cardview.widget.CardView>
+
+                <!-- CardView - Gynecologist -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/gynecologistCardView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="20dp"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="8dp"
+                    android:elevation="8dp">
+
+                    <!-- Add your Gynecologist appointment layout here -->
+                    <ImageView
+                        android:id="@+id/gyecoView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="150dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginRight="16dp"
+                        android:src="@drawable/gyeco" />
+
+                </androidx.cardview.widget.CardView>
+
+            </GridLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

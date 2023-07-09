@@ -1,0 +1,74 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ambulanceBook">
+
+    <!-- ImageView -->
+    <ImageView
+        android:id="@+id/ambulanceImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:src="@drawable/ambown"
+        android:scaleType="centerCrop"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp" />
+
+    <!-- Patient Name Field -->
+    <EditText
+        android:id="@+id/patientName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Patient Name"
+        android:layout_below="@id/ambulanceImageView"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:padding="8dp" />
+
+    <!-- Location Field -->
+    <EditText
+        android:id="@+id/etSelectedLocation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Selected Location"
+        android:layout_below="@id/patientName"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginTop="16dp"
+        android:enabled="false"
+        android:focusable="false"
+        android:clickable="false"
+        android:textSize="16sp"
+        android:padding="16dp"/>
+
+    <FrameLayout
+        android:id="@+id/map_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/teal_200"/>
+
+    <Button
+        android:id="@+id/location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select Location"
+        android:layout_below="@id/etSelectedLocation"
+        android:layout_marginLeft="98dp"
+        android:layout_marginTop="34dp"
+        android:textSize="16sp"
+        android:padding="16dp"/>
+
+    <!-- Booking Button -->
+    <Button
+        android:id="@+id/booking"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Book Ambulance"
+        android:layout_below="@id/location"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp" />
+
+</RelativeLayout>

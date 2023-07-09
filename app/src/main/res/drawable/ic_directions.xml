@@ -1,0 +1,21 @@
+<!-- ic_directions.xml -->
+
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="640"
+    android:viewportHeight="640">
+
+    <path
+        android:fillColor="#1fa5de"
+        android:pathData="M320,0C143.4,0,0,143.4,0,320s143.4,320,320,320s320-143.4,320-320S496.6,0,320,0z M320,608c-154.2,0-288-125-288-288S165.8,32,320,32s288,125,288,288S474.2,608,320,608z"/>
+
+    <path
+        android:fillColor="#000000"
+        android:pathData="M528,320c0-33.05-26.95-60-60-60h-84v-16c0-17.67-14.33-32-32-32H176c-17.67,0-32,14.33-32,32v16H60c-33.05,0-60,26.95-60,60v240c0,33.05,26.95,60,60,60h288c33.05,0,60-26.95,60-60V320z M416,480H224v-32h192V480z M352,416H224v-32h128V416z M352,352H224v-32h128V352z M480,480h-96v-32h96V480z M480,416h-96v-32h96V416z M480,352h-96v-32h96V352z"/>
+
+    <path
+        android:fillColor="#000000"
+        android:pathData="M216,328h64v-64h64v-64h-64v-64h-64v64h-64v64h64V328z M312,200h64v64h-64V200z"/>
+
+</vector>
